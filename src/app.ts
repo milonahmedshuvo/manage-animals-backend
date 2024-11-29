@@ -1,6 +1,7 @@
 import express, {  NextFunction, Request, Response } from 'express'
 import cors from 'cors'
 import { animalRoute } from './app/module/animal/animal.routes'
+import { categoryRoute } from './app/module/category/category.routes'
 // import { animalRoute } from './app/module/animal/animal.routes'
 // import { categoryRoute } from './app/module/category/category.routes'
 const app = express()
@@ -14,7 +15,7 @@ app.use(express.json())
 
 // application route 
 app.use('/api/v1/animal', animalRoute )
-// app.use('/api/v1/category', categoryRoute )
+app.use('/api/v1/category', categoryRoute )
 
 
 
